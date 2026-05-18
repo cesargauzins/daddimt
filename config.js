@@ -7,7 +7,7 @@ const CONFIG = {
 
   // --- VENTE ---
   // Mets true pour ouvrir les commandes, false pour les fermer
-  saleOpen: true,
+  saleOpen: false,
 
   // --- LIEN GOOGLE FORM ---
   // Colle ici ton lien Google Form quand tu ouvres une vente
