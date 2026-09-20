@@ -21,7 +21,7 @@ const CONFIG = {
   saleDescription: "Une nouvelle fournée de tiramisu maison vous attend. Passez votre commande avant la date limite !",
 
   // Date limite de commande (texte libre, ex: "20 mai 2026 à 23h59")
-  saleDeadline: "Mardi 2 Septembre 17h",
+  saleDeadline: "Mardi 22 Septembre 17h",
 
   // --- INFOS CONTACT (optionnel) ---
   contactEmail: "",
