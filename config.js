@@ -11,7 +11,7 @@ const CONFIG = {
 
   // --- LIEN GOOGLE FORM ---
   // Colle ici ton lien Google Form quand tu ouvres une vente
-  googleFormLink: "https://docs.google.com/forms/d/e/1FAIpQLSfPmq1Xn4OoU4jBI06adbBegMltb0lKuPnyvBQSMg-EJItsSQ/viewform?usp=header",
+  googleFormLink: "https://docs.google.com/forms/d/e/1FAIpQLSfPmq1Xn4OoU4jBI06adbBegMltb0lKuPnyvBQSMg-EJItsSQ/viewform?usp=dialog",
 
   // --- DETAILS DE LA VENTE ---
   // Titre affiché sur le site quand la vente est ouverte
