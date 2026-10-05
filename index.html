@@ -12,6 +12,17 @@
 </head>
 <body>
 
+  <!-- ===== CHOIX DE LANGUE ===== -->
+  <div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" hidden>
+    <div class="lang-modal__box">
+      <img src="logo.png" alt="Sugar Daddimt" class="lang-modal__logo" />
+      <h2 id="lang-modal-title" class="lang-modal__title">Choisissez votre langue · Choose your language</h2>
+      <div id="lang-list" class="lang-modal__list"></div>
+    </div>
+  </div>
+
+  <button id="lang-switch" class="lang-switch" type="button" aria-label="Langue / Language">🇫🇷 FR</button>
+
   <!-- ===== HERO ===== -->
   <header class="hero">
     <div class="hero__noise"></div>
@@ -36,8 +47,8 @@
     <div class="hero__content">
       <img src="logo.png" alt="Sugar Daddimt – Le Club des Gourmands" class="hero__logo" />
       <div class="hero__ornament" aria-hidden="true"><span></span>✦<span></span></div>
-      <p class="hero__tagline">Tiramisu artisanal fait avec amour</p>
-      <a href="#commande" class="btn btn--hero" id="hero-cmd-btn">Commander</a>
+      <p class="hero__tagline" data-i18n="hero.tagline">Tiramisu artisanal fait avec amour</p>
+      <a href="#commande" class="btn btn--hero" id="hero-cmd-btn" data-i18n="hero.cta">Commander</a>
       <div class="hero__scroll-hint">
         <span></span>
       </div>
@@ -52,44 +63,44 @@
   <!-- ===== COMMANDE ===== -->
   <section class="order" id="commande">
     <div class="container">
-      <h2 class="section-title section-title--center section-title--light">Commander</h2>
+      <h2 class="section-title section-title--center section-title--light" data-i18n="order.title">Commander</h2>
 
       <!-- Nos tiramisus -->
       <div class="products-grid">
         <div class="product-card">
           <div class="product-card__img-wrap">
-            <div class="product-card__placeholder"><span>📸</span><p>Photo à venir</p></div>
+            <div class="product-card__placeholder"><span>📸</span><p data-i18n="photo.soon">Photo à venir</p></div>
             <!-- Renomme ton image en tiramisu-classique.jpg et place-la dans le dossier du projet -->
-            <img src="recette_tiramisu clasiuz.jpg" alt="Tiramisu Classique" class="product-card__img"
+            <img src="recette_tiramisu clasiuz.jpg" alt="Tiramisu Classique" data-i18n-alt="product.classic.name" class="product-card__img"
                  style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none'" />
           </div>
           <div class="product-card__info">
-            <h3 class="product-card__name">Tiramisu Classique</h3>
-            <p class="product-card__desc">La recette traditionnelle — café, mascarpone, biscuits boudoirs et cacao en poudre.</p>
+            <h3 class="product-card__name" data-i18n="product.classic.name">Tiramisu Classique</h3>
+            <p class="product-card__desc" data-i18n="product.classic.desc">La recette traditionnelle — café, mascarpone, biscuits boudoirs et cacao en poudre.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-card__img-wrap">
-            <div class="product-card__placeholder"><span>📸</span><p>Photo à venir</p></div>
+            <div class="product-card__placeholder"><span>📸</span><p data-i18n="photo.soon">Photo à venir</p></div>
             <!-- Renomme ton image en tiramisu-nutella.jpg et place-la dans le dossier du projet -->
-            <img src="speculoooss.jpeg" alt="Tiramisu Nutella Spéculoos" class="product-card__img"
+            <img src="speculoooss.jpeg" alt="Tiramisu Nutella Spéculoos" data-i18n-alt="product.nutella.name" class="product-card__img"
                  style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none'" />
           </div>
           <div class="product-card__info">
-            <h3 class="product-card__name">Tiramisu Nutella Spéculoos</h3>
-            <p class="product-card__desc">Notre création signature — Nutella fondant, spéculoos croquants et crème onctueuse.</p>
+            <h3 class="product-card__name" data-i18n="product.nutella.name">Tiramisu Nutella Spéculoos</h3>
+            <p class="product-card__desc" data-i18n="product.nutella.desc">Notre création signature — Nutella fondant, spéculoos croquants et crème onctueuse.</p>
           </div>
         </div>
       </div>
 
       <!-- Affichage dynamique géré par script.js -->
       <div id="order-open" class="order-box order-box--open" style="display: none;">
-        <div class="order-box__badge">Vente ouverte</div>
+        <div class="order-box__badge" data-i18n="sale.badge">Vente ouverte</div>
         <h3 id="sale-title" class="order-box__title"></h3>
         <p id="sale-description" class="order-box__desc"></p>
         <p id="sale-deadline" class="order-box__deadline"></p>
         <a id="order-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
-          Passer ma commande
+          <span data-i18n="sale.button">Passer ma commande</span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -106,8 +117,8 @@
             <text x="32" y="38" text-anchor="middle" font-size="20" fill="currentColor">🥄</text>
           </svg>
         </div>
-        <h3 class="order-box__title">Pas de vente en cours</h3>
-        <p class="order-box__desc">
+        <h3 class="order-box__title" data-i18n="closed.title">Pas de vente en cours</h3>
+        <p class="order-box__desc" data-i18n-html="closed.desc">
           Aucune commande n'est ouverte pour le moment.<br/>
           Revenez bientôt pour la prochaine fournée !
         </p>
@@ -121,27 +132,27 @@
     <div class="container">
       <div class="about__grid reveal">
         <div class="about__text">
-          <h2 class="section-title">Notre histoire</h2>
-          <p>
+          <h2 class="section-title" data-i18n="about.title">Notre histoire</h2>
+          <p data-i18n="about.p1">
             Sugar Daddimt est une association passionnée dédiée à l'art du tiramisu maison.
             Tout commenca en J152 lorsque Daddy Pépéroni vola la recette secrete de la mama Ricotina Mozzarella.
             Son rêve: faire des tiramisus et redoré le blason de la famille Parmigiano, autrefois célèbre pour ses fondant au chocolat de l'espace.
           </p>
-          <p>
+          <p data-i18n="about.p2">
             Nous organisons régulièrement des ventes pour partager nos créations
             avec tous les amateurs de douceurs. Restez connectés pour ne pas rater
             la prochaine commande !
           </p>
           <div class="about__badges">
-            <span class="about__badge"><span>🥚</span> Œufs frais</span>
-            <span class="about__badge"><span>🧀</span> Mascarpone</span>
-            <span class="about__badge"><span>☕</span> Café serré</span>
-            <span class="about__badge"><span>🍪</span> Boudoirs</span>
-            <span class="about__badge"><span>🍫</span> Cacao pur</span>
+            <span class="about__badge"><span>🥚</span> <span data-i18n="badge.eggs">Œufs frais</span></span>
+            <span class="about__badge"><span>🧀</span> <span data-i18n="badge.mascarpone">Mascarpone</span></span>
+            <span class="about__badge"><span>☕</span> <span data-i18n="badge.coffee">Café serré</span></span>
+            <span class="about__badge"><span>🍪</span> <span data-i18n="badge.ladyfingers">Boudoirs</span></span>
+            <span class="about__badge"><span>🍫</span> <span data-i18n="badge.cocoa">Cacao pur</span></span>
           </div>
         </div>
         <div class="about__visual">
-          <img src="photo.jpeg" alt="Notre tiramisu" style="width:100%;height:100%;object-fit:cover;border-radius:1.2rem;box-shadow:0 8px 32px rgba(80,40,10,0.18);" />
+          <img src="photo.jpeg" alt="Notre tiramisu" data-i18n-alt="about.img" style="width:100%;height:100%;object-fit:cover;border-radius:1.2rem;box-shadow:0 8px 32px rgba(80,40,10,0.18);" />
         </div>
       </div>
     </div>
@@ -152,11 +163,12 @@
     <div class="container">
       <p class="footer__name">Sugar Daddimt</p>
       <p class="footer__tagline">Le Club des Gourmands</p>
-      <p class="footer__copy">Association – Tiramisu artisanal &copy; 2026</p>
+      <p class="footer__copy" data-i18n-html="footer.copy">Association – Tiramisu artisanal &copy; 2026</p>
     </div>
   </footer>
 
   <script src="config.js"></script>
   <script src="script.js"></script>
+  <script src="i18n.js"></script>
 </body>
 </html>
