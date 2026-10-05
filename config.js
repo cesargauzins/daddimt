@@ -11,7 +11,7 @@ const CONFIG = {
 
   // --- LIEN GOOGLE FORM ---
   // Colle ici ton lien Google Form quand tu ouvres une vente
-  googleFormLink: "https://docs.google.com/forms/d/e/1FAIpQLSfPmq1Xn4OoU4jBI06adbBegMltb0lKuPnyvBQSMg-EJItsSQ/viewform?usp=dialog",
+  googleFormLink: "https://docs.google.com/forms/d/e/1FAIpQLSffTpsWJfgvQ1f695YdwSNXsw9rwDs_8c6_hc1JE6I09SsJew/viewform?usp=dialog",
 
   // --- DETAILS DE LA VENTE ---
   // Titre affiché sur le site quand la vente est ouverte
@@ -21,7 +21,7 @@ const CONFIG = {
   saleDescription: "Une nouvelle fournée de tiramisu maison vous attend. Passez votre commande avant la date limite !",
 
   // Date limite de commande (texte libre, ex: "20 mai 2026 à 23h59")
-  saleDeadline: "Mardi 22 Septembre 17h",
+  saleDeadline: "Mardi 6 Octobre 11h",
 
   // --- INFOS CONTACT (optionnel) ---
   contactEmail: "",
